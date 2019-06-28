@@ -16,6 +16,16 @@ variables:
   prodApp: 'isabelProd'
 
 stages:
+- stage: Prebuild
+  displayName: 'Prebuild'
+  jobs:
+  - job: pre_build
+    displayName: 'Prebuild'
+    pool:
+      vmImage: 'Ubuntu-16.04'
+    steps:
+    - script: echo prebuild
+
 - stage: build
   displayName: 'Build'
   jobs:
