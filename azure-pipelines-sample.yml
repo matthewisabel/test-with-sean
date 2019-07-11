@@ -51,7 +51,7 @@ stages:
   jobs:
   - deployment: deployProd
     displayName: 'Deploy prod'
-    environment: isabelProdEnv
+    environment: isabelSampleEnv
     strategy:
       runOnce:
         deploy:
